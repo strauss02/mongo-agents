@@ -18,12 +18,16 @@ mongoose.connect(URL, { useNewUrlParser: true }) //Check reason
 
 console.log('Connection to MondoDB successful!')
 
-app.get('/', (req, res) => {
-  res.json('allah')
+app.get('/cities', (req, res) => {
+  Agent.find({})
+    .distinct('city')
+    .then((cities) => {
+      res.json(cities)
+    })
 })
 
-app.get('/cities', (req, res) => {
-  console.log('yay')
+app.get('/agents/?city=<city>', (req, res) => {
+  console.log(query.params)
   res.send('yay')
 })
 

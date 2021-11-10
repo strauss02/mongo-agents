@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const csv = require('csvtojson')
 const path = require('path')
 const mongoose = require('mongoose')
@@ -26,7 +28,7 @@ csv()
         }
       })
       .filter((agent) => {
-        return agent.license_id && full_name && city
+        return agent.license_id && agent.full_name && agent.city
       })
 
     Agent.insertMany(agentsCollection)
