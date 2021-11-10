@@ -26,9 +26,11 @@ app.get('/cities', (req, res) => {
     })
 })
 
-app.get('/agents', (req, res) => {
+app.get('/agents/:city_name', (req, res) => {
   console.log(req.query.city)
-  res.send('yay')
+  Agent.find({ city: req.params.city_name }).then((agents) => {
+    res.json(agents)
+  })
 })
 
 /* ====== Port ======= */
