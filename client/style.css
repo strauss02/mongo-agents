@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: 1px dotted green;
+  outline-offset: 10px;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  background-color: whitesmoke;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: auto;
+}
+
+main {
+  width: 500px;
+  height: 400px;
+  display: flex;
+  border: 2px solid black;
+  border-radius: 1em 1em 1em 1em;
+  flex-direction: column;
+  align-items: center;
+}
+
+.top-row {
+  display: flex;
+  height: 50px;
+  width: 100%;
+  border-bottom: 2px solid black;
+  border-radius: 1em 1em 0px 0px;
+}
+
+.tab {
+  width: 34%;
+  line-height: 50px;
+  text-align: center;
+  border-right: 2px solid black;
+  background-color: darkseagreen;
+  font-weight: 500;
+  transition: 0.3s;
+}
+.tab:hover {
+  background-color: rgb(172, 200, 172);
+  transition: 0.3s;
+}
+
+.right-tab {
+  border-right: none;
+  border-radius: 0 1em 0 0;
+}
+.left-tab {
+  border-radius: 1em 0 0 0;
+}
+
+input {
+  margin: 1rem 1rem;
+  width: 300px;
+}
+
+label {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.form {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  display: block;
+}
