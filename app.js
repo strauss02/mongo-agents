@@ -26,8 +26,8 @@ app.get('/cities', (req, res) => {
     })
 })
 
-app.get('/agents/?city=<city>', (req, res) => {
-  console.log(query.params)
+app.get('/agents', (req, res) => {
+  console.log(req.query.city)
   res.send('yay')
 })
 
