@@ -11,15 +11,24 @@
     <header><h1>Very Real Estate</h1></header>
 
     <main>
-      <div class="form-container">
-        <div class="top-row">
-          <span class="left-tab"></span>
-          <span class="center-tab"></span>
-          <span class="right-tab"></span>
+      <div class="top-row">
+        <span class="tab left-tab">Get all cities</span>
+        <span class="tab center-tab">Get agents in city</span>
+        <span class="tab right-tab">Update agent city</span>
+      </div>
+      <div class="form">
+        <div class="new-city-field">
+          <label for="new-city-input">New City</label>
+          <input type="text" id="new-city-input" />
         </div>
-
-        <input type="text" id="city-input" />
-        <input type="text" id="agent-input" />
+        <div class="city-field">
+          <label for="city-input">City</label>
+          <input type="text" id="city-input" />
+        </div>
+        <div class="agent-field">
+          <label for="agent-input">Agent license ID </label>
+          <input type="text" id="agent-input" />
+        </div>
       </div>
     </main>
   </body>
