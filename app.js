@@ -27,9 +27,17 @@ app.get('/cities', (req, res) => {
 })
 
 app.get('/agents/:city_name', (req, res) => {
-  console.log(req.query.city)
   Agent.find({ city: req.params.city_name }).then((agents) => {
     res.json(agents)
+  })
+})
+
+app.put('/agents/:id/edit', (req, res) => {
+  console.log(req.params.id)
+  const id = req.params.id
+  const newCity = req.body.newCity
+  Agent.findOneAndUpdate({ license_id: id }, { city: newCity }).then(() => {
+    res.send('aloha')
   })
 })
 
